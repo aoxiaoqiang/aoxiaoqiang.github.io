@@ -1,3 +1,3 @@
-# 点滴知识
+# 前端收藏
 
-前端收藏
+![front-end-developer](../assets/image/site/developer.jpg)

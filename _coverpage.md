@@ -1,5 +1,5 @@
 <!-- ![logo](./assets/image/icon.svg) -->
-![logo](./assets/image/site/front-end-dan-1.png)
+![logo](./assets/image/site/front-end-guy.png)
 
 > 收藏夹
 
@@ -10,7 +10,7 @@
 * 推荐网站 && 教程
 
 [GitHub](https://github.com/aoxiaoqiang/doc)
-[快速开始](#点滴知识)
+[快速开始](#前端收藏)
 
 <!-- 背景图片 -->
 <!-- ![background-image](./assets/image/dot.png) -->
