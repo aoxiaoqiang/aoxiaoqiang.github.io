@@ -21,6 +21,8 @@ ssh -p port user@host
 
 [官方文档](https://git-scm.com/book/zh/v2)
 
+![git命令速查表](../assets/image/git.png)
+
 ### 常用命令
 
 ```sh
