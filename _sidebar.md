@@ -4,9 +4,10 @@
   * [好文共享](knowledge/guide)
   * [JavaScript](knowledge/js)
   * [CSS](knowledge/css)
+  * [小程序](knowledge/miniprogram)
 
 * 推荐篇
   * [工具篇](recommend/tool)
-  * [网站推荐](recommend/site)
+  * [其他](recommend/site)
 
 * [关于](about)

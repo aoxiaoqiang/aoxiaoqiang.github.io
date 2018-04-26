@@ -1,5 +1,10 @@
 # 关于 {docsify-ignore-all}
 
+<!--
+ {docsify-ignore-all}
+ {docsify-ignore}
+-->
+
 ## 关于文档
 
 该文档使用 docsify 创建，感谢作者的开发如此便捷的文档创建方式。
@@ -13,3 +18,5 @@
 <span style="display: inline-block; border: 1px solid #eee; border-radius: 4px; overflow: hidden;">
 ![wechat](./assets/image/me/Wechat_240x321.png)
 </span>
+
+文档编辑操作: <a href="javascript:;" onclick="javascript: window.localStorage.clear(); window.location.reload();">刷新缓存</a>

@@ -84,7 +84,9 @@ ssh -T git@github.com   # 这里测试的是 github.com站点是否添加ssh
 
 ![gitmoji-cli](https://cloud.githubusercontent.com/assets/7629661/20454643/11eb9e40-ae47-11e6-90db-a1ad8a87b495.gif)
 
-## AnyProxy
+## 代理工具
+
+[whistle](http://wproxy.org/whistle/)
 
 [AnyProxy github](https://github.com/alibaba/anyproxy)
 
