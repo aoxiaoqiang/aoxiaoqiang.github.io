@@ -47,7 +47,9 @@ a[2] = 'myString3'
 let a = ['myString1', 'myString2', 'myString3']
 ```
 
-```javascript(** variable ? 'val1': 'val2' **)
+* `variable ? 'val1': 'val2'`
+
+```javascript
 let big
 if (x > 10) {
   big = true
@@ -68,7 +70,7 @@ let x,
   z = 3
 ```
 
-** ++, --, +=, -=, \*=, /= **
+* `++, --, +=, -=, \*=, /=`
 
 ```javascript
 x = x + 1
@@ -80,7 +82,7 @@ minusCount--
 y *= 10
 ```
 
-** /^d/ **
+* `/^d/`
 
 ```javascript
 var re = new RegExp('d+(.)+d+', 'igm'),
@@ -91,7 +93,7 @@ var result = /d+(.)+d+/gim.exec('padding 01234 text text 56789 padding')
 console.log(result) //"01234 text text 56789"
 ```
 
-** arguments **
+* arguments
 
 ```javascript
 function myFunction(myString, myNumber, myObject, myArray, myBoolean) {
