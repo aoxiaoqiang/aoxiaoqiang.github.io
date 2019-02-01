@@ -22,30 +22,30 @@
 
 ```shell
 # 在当前用户的根目录下创建
-mkdir ~/.npm-global
+➜ mkdir ~/.npm-global
 
 # 将创建的目录设置为新的npm路径
-npm config set prefix '~/.npm-global'
+➜ npm config set prefix '~/.npm-global'
 ```
 
 3. 至此已经创建完毕，要让系统能访问到就需要将`npm`地址设置为环境变量。
 
 ```shell
 # 设置环境变量
-echo 'export PATH=~/.npm-global/bin:$PATH' >> ~/.bash_profile
+➜ echo 'export PATH=~/.npm-global/bin:$PATH' >> ~/.bash_profile
 
 # 使配置改动生效
-source  ~/.bash_profile
+➜ source  ~/.bash_profile
 ```
 
 这里设置的是 `~/.bash_profile`, 我开始尝试设置后然后有问题题，后来发现我用的脚本不是`bash`,而是后来装的`zsh`。所以这理就直接设置`~/.zshrc` 就可以了。
 
 ```shell
 # 设置环境变量
-echo 'export PATH=~/.npm-global/bin:$PATH' >> ~/.zshrc
+➜ echo 'export PATH=~/.npm-global/bin:$PATH' >> ~/.zshrc
 
 # 使配置改动生效
-source  ~/.zshrc
+➜ source  ~/.zshrc
 ```
 
 修改完成之后，检查一下 `npm config get prefix` 就是我们刚才新设置的 `~/.npm-global`, `~/.bash_profile`或者`~/.zshrc`中也有了我们新添加的环境变量。
@@ -68,11 +68,20 @@ npm install apidoc -g
 所以为了保证全局安装的模块正常使用，只要保证上的流程 OK 就行了:
 
 1. 获取`npm config get prefix`返回的路径。需要用户要有权限访问，如果没有权限也可以自定义`npm`路径`npm config set prefix '~/.npm-global'`(我这里创建的是`~/.npm-global`目录);
-2. 将`~/.npm-global`目录设置到全面`PATH`中，保证命令使用的时候能找到。 这里设置的时候得注意一下设置在哪个配置文件中，如果是用的是系统 shell 脚本，可以直接设置`~/.bash_profile`, 我使用的还是 zsh 这里就设置的是`~/.zshrc`;
-3. 然后让配置生效`source ~/.bash_profile` 或 `source ~/.zshrc`。
 
 ```shell
-➜ echo echo 'export PATH=~/.npm-global/bin:$PATH' >> ~/.bash_profile && source ~/.bash_profile
+➜ npm config get prefix
+➜ mkdir -p ~/.npm-global
+➜ npm config set prefix '~/.npm-global'
+
+# 验证看是否设置正确
+➜ npm config get prefix
+```
+
+2. 将`~/.npm-global`目录设置到全面`PATH`中，保证命令使用的时候能找到。 这里设置的时候得注意一下设置在哪个配置文件中，如果是用的是系统 shell 脚本，可以直接设置`~/.bash_profile`, 我使用的还是 zsh 这里就设置的是`~/.zshrc`; 然后让配置生效`source ~/.bash_profile` 或 `source ~/.zshrc`。
+
+```shell
+➜ echo 'export PATH=~/.npm-global/bin:$PATH' >> ~/.bash_profile && source ~/.bash_profile
 
 ➜ echo 'export PATH=~/.npm-global/bin:$PATH' >> ~/.zshrc && source ~/.zshrc
 ```
