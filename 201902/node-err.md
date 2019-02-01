@@ -38,7 +38,7 @@
 ➜ source  ~/.bash_profile
 ```
 
-这里设置的是 `~/.bash_profile`, 我开始尝试设置后然后有问题题，后来发现我用的脚本不是`bash`,而是后来装的`zsh`。所以这理就直接设置`~/.zshrc` 就可以了。
+这里设置的是 `~/.bash_profile`, 我开始尝试设置后然后有问题，后来发现我用的脚本不是`bash`,而是后来装的`zsh`。所以这理就直接设置`~/.zshrc` 就可以了。
 
 ```shell
 # 设置环境变量
@@ -50,11 +50,12 @@
 
 修改完成之后，检查一下 `npm config get prefix` 就是我们刚才新设置的 `~/.npm-global`, `~/.bash_profile`或者`~/.zshrc`中也有了我们新添加的环境变量。
 
-再次尝试`npm i apidoc`, `apidoc -i myapp/ -o apidoc/` 就能正常运行了。
+再次尝试`npm i apidoc -g`, `apidoc -i myapp/ -o apidoc/` 就能正常运行了。
 
-> 至此问题是解决了, 后来有想起了另一个问题: 这里我们使用的`apidoc`是全局安装的，而普通项目里的依赖是在项目单独中安装这两个有什么区别呢? 什么原因导致全局安装成功后不能使用呢?
+!> 至此问题是解决了, 后来有想起了另一个问题: 这里我们使用的`apidoc`是全局安装的，而普通项目里的依赖是在项目单独中安装这两个有什么区别呢? 什么原因导致全局安装成功后不能使用呢?
 
 ```shell
+# 两者有什么区别
 npm install apidoc
 npm install apidoc -g
 ```
