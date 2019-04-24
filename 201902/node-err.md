@@ -96,9 +96,9 @@ npm install apidoc -g
 - [nodejs 全局安装和本地安装的区别](http://www.cnblogs.com/PeunZhang/p/5629329.html)
 - [npm install](https://www.cnblogs.com/chyingp/p/npm-install-difference-between-local-global.html)
 
-
 <div id="gitalk-container"></div>
-<script>
+
+<script type="text/javascript">
   var gitalk = new Gitalk({
   clientID: 'f4cf3934cb701cb3eb66',
   clientSecret: '978c5b687161057c41859fda0b35bc17efccca5d',
@@ -108,6 +108,5 @@ npm install apidoc -g
   id: location.href,      // Ensure uniqueness and length less than 50
   distractionFreeMode: false  // Facebook-like distraction free mode
 })
-
 gitalk.render('gitalk-container');
 </script>
