@@ -2,7 +2,7 @@
 
 最近在做一个 koa 写后端的一个小项目，项目发到服务器上后想在服务器端使用 Node 中[apidoc](http://apidocjs.com/)模块在服务器端运行，生成接口文档。然而在服务器端运行 `npm install apidoc -g` 之后，使用 `apidoc -i myapp/ -o apidoc/` 结果报错，提示命令不存在，尝试了两次都失败了。
 
-![error-image](https://user-gold-cdn.xitu.io/2019/2/1/168a4db6a7712d98?w=838&h=518&f=png&s=77072)
+![error-image](./images/node-error-1.jpg)
 
 后来搜了一些资料发现，应该是环境变量问题，设置环境变量应该就可以了。
 
