@@ -1,0 +1,3 @@
+# JavaScript 数据类型
+
+--
