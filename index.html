@@ -64,7 +64,7 @@
 
   <!-- 添加评论 -->
   <div id="commentContainer"></div>
-  <div id="btnCommentContainer">我有话说</div>
+  <div id="btnCommentContainer">登录GitHub评论</div>
   <script>
     // 评论按钮
     var commentContainer = document.getElementById('commentContainer');
@@ -85,7 +85,7 @@
 
     // 评论数据提交
     var gitment = new Gitment({
-      id: window.location.href,
+      // id: window.location.href,
       owner: 'aoxiaoqiang',
       repo: 'aoxiaoqiang.github.io',
       oauth: {
