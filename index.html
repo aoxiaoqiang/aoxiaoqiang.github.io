@@ -63,13 +63,25 @@
   <script src="//unpkg.com/docsify/lib/plugins/zoom-image.js"></script>
 
   <!-- 添加评论 -->
-  <div id="commentContainer"></div>
-  <div id="btnCommentContainer">登录GitHub评论</div>
+  <div class="commentContainerBox" id="commentContainerBox">
+    <div id="commentContainer" class="content-box"></div>
+  </div>
+  <div id="btnCommentContainer">GitHub评论</div>
   <script>
     // 评论按钮
-    var commentContainer = document.getElementById('commentContainer');
+    var commentContainer = document.getElementById('commentContainerBox');
     var btnComment = document.getElementById('btnCommentContainer');
+
+    // 隐藏评论
+    commentContainer.onclick = function(event) {
+      commentContainer.className = '';
+    }
+    document.getElementById('commentContainer').onclick = function(event) {
+      event.stopPropagation();
+    }
+
     btnComment.onclick = function(event) {
+      event.stopPropagation();
       if (commentContainer.className === 'show-pannel') {
         commentContainer.className = '';
       } else {

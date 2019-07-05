@@ -2,9 +2,10 @@
 #btnCommentContainer {
   z-index: 100;
   position: fixed;
-  bottom: 60%;
+  top: 20%;
   right: 0;
   padding: 0.6em 1.2em;
+  padding-right: 1.6em;
   background-color: #36bc98;
   border: 0;
   border-top-left-radius: .2em;
@@ -21,22 +22,36 @@
   font-weight: 700;
   z-index: 9;
 }
-#commentContainer {
-  &.show-pannel {
-    transform: translateY(0);
-  }
-  padding: 0 60px;
+
+#commentContainerBox {
   position: fixed;
+  top: 0;
   right: 0;
   bottom: 0;
-  left: 300px;
-  background: #FFF;
-  box-sizing: border-box;
-  border-top: 1px solid #42b983;
+  left: 0;
+  background: transparent;
   transform: translateY(100%);
   transition: all .3s;
-  max-height: 50%;
-  overflow-y: scroll;
+
+  .content-box {
+    margin: 0 auto;
+    padding: 0 60px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #FFF;
+    box-sizing: border-box;
+    border-top: 2px solid #42b983;
+    transition: all .3s;
+    max-height: 50%;
+    overflow-y: scroll;
+  }
+
+  &.show-pannel {
+    background: rgba(255, 255, 255, .6);
+    transform: translateY(0);
+  }
 
   .gitment-container {
     font-family: sans-serif;
