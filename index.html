@@ -68,10 +68,11 @@
   </div>
   <div id="btnCommentContainer">GitHub评论</div>
   <script>
+    initBtn();
+
     // 评论按钮
     var commentContainer = document.getElementById('commentContainerBox');
     var btnComment = document.getElementById('btnCommentContainer');
-
     // 隐藏评论
     commentContainer.onclick = function(event) {
       commentContainer.className = '';
@@ -91,14 +92,30 @@
 
     // 监听页面路由变化，初始化评论
     window.addEventListener('hashchange', function(){
-      // console.log('router change');
-      // console.log(window.location.href);
       initGitment();
     })
-
     initGitment();
 
-    // 根据当前URL 初始化 gitment
+
+    window.addEventListener('resize', function() {
+      initBtn();
+    })
+
+
+    /**
+    * 屏幕宽度大于980时才出现评论按钮
+    */
+    function initBtn() {
+      var cWidth = document.body.clientWidth;
+      if (cWidth && cWidth < 980) {
+        btnComment.style.display = 'none';
+        commentContainer.style.display = 'none';
+      }
+    }
+
+    /*
+    * 根据当前URL 初始化 gitment
+    **/
     function initGitment() {
       var gitment = new Gitment({
         id: location.href.split('?')[0], // 可选参数默认为 location.href
