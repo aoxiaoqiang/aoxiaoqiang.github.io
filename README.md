@@ -1,11 +1,10 @@
-# 前端收藏
+# 前端小匠
 
-[https://aoxiaoqiang.github.io/](https://aoxiaoqiang.github.io/)
+预览地址：[https://aoxiaoqiang.github.io/](https://aoxiaoqiang.github.io/)
 
 ![front-end-developer](./assets/image/site/developer.jpg)
 
 项目功能
 
 1. 博客文章；
-2. 好文收藏和推荐；
-3. https://aoxiaoqiang.github.io/
+2. 好文收藏和推荐;

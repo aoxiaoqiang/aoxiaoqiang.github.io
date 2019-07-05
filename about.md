@@ -16,7 +16,6 @@
 前端开发小匠一枚，目前主要做前端开发相关工作，现居地上海。
 
 <span style="display: inline-block; border: 1px solid #eee; border-radius: 4px; overflow: hidden;">
-![wechat](./assets/image/me/Wechat_240x321.png)
 </span>
 
 文档编辑操作: <a href="javascript:;" onclick="javascript: window.localStorage.clear(); window.location.reload();">刷新缓存</a>

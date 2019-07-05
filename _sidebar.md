@@ -2,8 +2,8 @@
 
 * 知识篇
   * [我的博客](knowledge/blog)
-  * [好文共享](knowledge/guide)
-  * [JavaScript](knowledge/js)
+  <!-- * [好文共享](knowledge/guide) -->
+  <!-- * [JavaScript](knowledge/js) -->
   * [JavaScript知识导图](knowledge/js_tutorial)
   * [CSS](knowledge/css)
   * [小程序](knowledge/miniprogram)
