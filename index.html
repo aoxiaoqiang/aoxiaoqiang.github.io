@@ -77,23 +77,28 @@
       }
     }
 
-    // Router change
-    // window.addEventListener('hashchange', function(){
-    //   console.log('router change');
-    //   console.log(window.location.href);
-    // })
-
-    // 评论数据提交
-    var gitment = new Gitment({
-      // id: window.location.href,
-      owner: 'aoxiaoqiang',
-      repo: 'aoxiaoqiang.github.io',
-      oauth: {
-        client_id: 'f4cf3934cb701cb3eb66',
-        client_secret: 'c5870daf34b3cb306eeebff77e71e1a7135a6c6f',
-      },
+    // 监听页面路由变化，初始化评论
+    window.addEventListener('hashchange', function(){
+      // console.log('router change');
+      // console.log(window.location.href);
+      initGitment();
     })
-    gitment.render('commentContainer');
+
+    initGitment();
+
+    // 根据当前URL 初始化 gitment
+    function initGitment() {
+      var gitment = new Gitment({
+        // id: window.location.href, // 可选参数默认为 location.href
+        owner: 'aoxiaoqiang',
+        repo: 'aoxiaoqiang.github.io',
+        oauth: {
+          client_id: 'f4cf3934cb701cb3eb66',
+          client_secret: 'c5870daf34b3cb306eeebff77e71e1a7135a6c6f',
+        },
+      })
+      gitment.render('commentContainer');
+    }
     </script>
 </body>
 
