@@ -13,10 +13,14 @@
   <!-- <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/dark.css"> -->
   <!-- <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/pure.css"> -->
   <link rel="stylesheet" href="./assets/css/style.css">
+
+  <link rel="stylesheet" href="./assets/gitment/default.css">
+  <script src="./assets/gitment/gitment.browser.js"></script>
 </head>
 
 <body>
   <div data-app id="app">加载中...</div>
+
   <script>
     window.$docsify = {
       el: '#app',
@@ -57,6 +61,34 @@
   <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
   <script src="//unpkg.com/docsify/lib/plugins/emoji.js"></script>
   <script src="//unpkg.com/docsify/lib/plugins/zoom-image.js"></script>
+
+  <!-- 添加评论 -->
+  <div id="commentContainer"></div>
+  <div id="btnCommentContainer">评论</div>
+  <script>
+    // 评论按钮
+    var commentContainer = document.getElementById('commentContainer');
+    var btnComment = document.getElementById('btnCommentContainer');
+    btnComment.onclick = function(event) {
+      if (commentContainer.className === 'show-pannel') {
+        commentContainer.className = '';
+      } else {
+        commentContainer.className = 'show-pannel';
+      }
+    }
+
+    // 评论数据提交
+    var gitment = new Gitment({
+      id: window.location.pathname,
+      owner: 'aoxiaoqiang',
+      repo: 'aoxiaoqiang.github.io',
+      oauth: {
+        client_id: 'b187f45fdd14e49e9e28',
+        client_secret: '131dfc71f71142382175f757b92db6d7211c3e70',
+      },
+    })
+    gitment.render('commentContainer');
+    </script>
 </body>
 
 </html>

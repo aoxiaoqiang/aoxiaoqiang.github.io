@@ -10,5 +10,10 @@ span {
     sans-serif;
 }
 
-.my-btn {
+
+body {
+  position: relative;
+  height: 100vw;
 }
+
+.my-btn {}
